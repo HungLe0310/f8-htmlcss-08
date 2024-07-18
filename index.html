@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +33,25 @@
         <meta name="theme-color" content="#ffffff" />
         <!-- Fonts  -->
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- SCripts -->
+        <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <h1>HELlo</h1>
+        <!-- Header -->
+        <header class="header" id="header">
+            <script>
+                load("#header", "./template/header.html");
+            </script>
+        </header>
+        <div class="container">
+            <h1>HOME PAGe</h1>
+            <footer id="footer">
+                <script>
+                    load("#footer", "./template/footer.html");
+                </script>
+            </footer>
+        </div>
     </body>
 </html>

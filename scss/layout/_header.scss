@@ -1,0 +1,103 @@
+@use "../abstracts";
+
+// place holder
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background: var(--header-bg-color);
+}
+.top-bar {
+    @extend %flexItemsCenter;
+    padding: 30px 0;
+    @include abstracts.breakpoint(lg) {
+        padding: 20px 0;
+    }
+    @include abstracts.breakpoint(sm) {
+        padding: 16px 0;
+    }
+    &__more {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    margin-left: 144px;
+    margin-right: auto;
+    @include abstracts.breakpoint(xl) {
+        margin-left: 30px;
+    }
+
+    &__list {
+        @extend %flexItemsCenter;
+        column-gap: 30px;
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+    &__link {
+        display: flex;
+        column-gap: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+    &__arrow {
+        margin-top: 4px;
+    }
+}
+.top-action {
+    @extend %flexItemsCenter;
+    gap: 20px;
+
+    &__group {
+        @extend %flexItemsCenter;
+        padding: 13px 20px;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        background: var(--top-action-group-bg-color);
+        box-shadow: 0px 20px 60px 10px var(--top-action-group-shadow);
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+
+        &--single {
+            padding: 13px;
+            @include abstracts.breakpoint(lg) {
+                display: none;
+            }
+        }
+    }
+    &__btn {
+        @extend %flexItemsCenter;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+    &__separate {
+        margin: 0 20px;
+        width: 1px;
+        height: 30px;
+        background: var(--top-action-group-separate);
+    }
+}
+
+.top-action__avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
