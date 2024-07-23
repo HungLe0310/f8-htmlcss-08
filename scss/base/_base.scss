@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-
 html {
     font-size: 62.5%;
 }
 
 body {
+    background: var(--body-bg);
     font-size: 1.6rem;
     font-family: "Gordita", sans-serif;
     color: var(--text-color);
@@ -34,4 +34,20 @@ button {
 }
 .icon {
     filter: var(--icon-color);
+}
+// Custom scrollbar
+
+::-webkit-scrollbar {
+    border-radius: 0;
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.5);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
