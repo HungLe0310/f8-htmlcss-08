@@ -1,0 +1,28 @@
+@use "../abstracts";
+
+.home {
+    &__container {
+        margin-top: 40px;
+    }
+    @include abstracts.breakpoint(md) {
+        margin-top: 30px;
+    }
+    &__heading {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41; /* 141.667% */
+        @include abstracts.breakpoint(md) {
+            font-size: 2.2rem;
+        }
+    }
+    &__cate {
+        --grid-gutter-x: 51px;
+        @include abstracts.breakpoint(xl) {
+            --grid-gutter-x: 30px;
+        }
+        @include abstracts.breakpoint(md) {
+            row-gap: 20px;
+        }
+    }
+}

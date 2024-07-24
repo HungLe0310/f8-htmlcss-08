@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,78 @@
         <!-- SCripts -->
         <script src="./assets/js/scripts.js"></script>
     </head>
-    <body>
+    <body style="height: 10000px">
         <!-- Header -->
         <header class="header" id="header">
             <script>
                 load("#header", "./templates/header.html");
             </script>
         </header>
-        <div class="container">
-            <h1>HOME PAGe</h1>
+        <main class="container home">
+            <!-- slide show -->
+            <section class="home__container">
+                <div class="slide-show">
+                    <div class="slide-show__inner">
+                        <div class="slide-show__item">
+                            <a class="slide-show__item-link" href="#!">
+                                <picture>
+                                    <source media="(max-width:767.98px)" srcset="./assets/img/slideshow-mb.png" />
+                                    <img class="slide-show__item-img" src="./assets/img/slideshow.png" alt="" />
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide-show__page">
+                        <span class="slide-show__num">1</span>
+                        <div class="slide-show__slider"></div>
+                        <span class="slide-show__num">5</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Browse Categories -->
+            <section class="home__container">
+                <h2 class="home__heading">Browse Categories</h2>
+                <div class="home__cate row row-cols-3 row-cols-md-1">
+                    <!-- Cate item 1 -->
+                    <div class="col">
+                        <article class="cate__item d-flex">
+                            <img src="./assets/img/products/item1.png" alt="" class="cate__thumb" />
+                            <section class="cate__info">
+                                <h3 class="cate__heading">$24 - $150</h3>
+                                <p class="cate__desc">New sumatra mandeling coffe blend</p>
+                            </section>
+                        </article>
+                    </div>
+
+                    <!-- Cate item 2 -->
+                    <div class="col">
+                        <article class="cate__item d-flex">
+                            <img src="./assets/img/products/item2.png" alt="" class="cate__thumb" />
+                            <section class="cate__info">
+                                <h3 class="cate__heading">$37 - $160</h3>
+                                <p class="cate__desc">Espresso arabica and robusta beans</p>
+                            </section>
+                        </article>
+                    </div>
+
+                    <!-- Cate item 3 -->
+                    <div class="col">
+                        <article class="cate__item d-flex">
+                            <img src="./assets/img/products/item3.png" alt="" class="cate__thumb" />
+                            <section class="cate__info">
+                                <h3 class="cate__heading">$32 - $160</h3>
+                                <p class="cate__desc">Lavazza top class whole bean coffee blend</p>
+                            </section>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="home__container"></section>
             <footer id="footer">
                 <script>
                     load("#footer", "./templates/footer.html");
                 </script>
             </footer>
-        </div>
+        </main>
     </body>
 </html>

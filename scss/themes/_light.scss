@@ -13,6 +13,7 @@ html {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
+
     //dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -20,4 +21,12 @@ html {
 
     --nav-bg-tablet-color: #fff;
     --nav-show-shadow-color: rgba(200, 200, 200, 0.4);
+
+    // Browser catelogy
+    --cate-item-bg-color: #eee;
+    --cate-heading-color: #000;
+    --cate-item-thumb-bg-color: #fff;
+    @include abstracts.breakpoint(md) {
+        --cate-item-bg-color: #fff;
+    }
 }
