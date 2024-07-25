@@ -29,4 +29,12 @@ html {
     @include abstracts.breakpoint(md) {
         --cate-item-bg-color: #fff;
     }
+
+    // Filter Btn
+    --filter-btn-bg-color: #fff;
+    --filter-btn-text-color: #6c6c72;
+
+    // Product Item
+    --product-item-bg-color: #fff;
+    --product-item-shadow-color: rgba(237, 237, 246, 0.2);
 }

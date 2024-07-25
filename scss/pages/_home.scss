@@ -8,7 +8,6 @@
         margin-top: 30px;
     }
     &__heading {
-        margin-bottom: 20px;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41; /* 141.667% */
@@ -24,5 +23,11 @@
         @include abstracts.breakpoint(md) {
             row-gap: 20px;
         }
+    }
+    &__row {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
