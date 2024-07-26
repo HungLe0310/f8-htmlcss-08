@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 *,
 ::after,
 ::before {
@@ -27,7 +29,8 @@ select {
     color: inherit;
 }
 
-button {
+button,
+input {
     padding: 0;
     border: none;
     outline: none;
@@ -51,4 +54,11 @@ button {
 ::-webkit-scrollbar-track {
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    @include abstracts.breakpoint(sm) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

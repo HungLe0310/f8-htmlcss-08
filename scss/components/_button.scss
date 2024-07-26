@@ -27,4 +27,14 @@
     border-radius: 50%;
     background: var(--like-btn-bg-color);
     box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+    &:not(&--liked) &__img-liked {
+        display: none;
+    }
+    &--liked &__img {
+        display: none;
+    }
+    &__img-liked {
+        margin-top: 9px;
+    }
 }
