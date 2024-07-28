@@ -100,35 +100,98 @@
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter__wrap">
                         <!-- Filter Btn -->
-                        <button class="filter-btn">
+                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             <span class="filter-btn__text">Filter</span>
                             <img class="icon filter-btn__img" src="./assets/icons/filter.svg" alt="" />
                         </button>
                         <!-- Filter Form -->
-                        <div class="filter__form">
-                            <label for="" class="filter__label">Filter</label>
-                            <div class="filter__form-group">
+                        <form id="home-filter" class="filter__form hide">
+                            <img class="filter__form-arrow" src="./assets/img/filter-bg.png" alt="" />
+                            <h3 class="filter__label">Filter</h3>
+                            <div class="filter__form-row">
                                 <!-- Filter col 1 -->
                                 <div class="filter__form-col">
                                     <label for="" class="filter__label">Price</label>
-                                    <div class="filter__slider" style="--min-value: 10%; --max-value: 60%"></div>
+                                    <div class="filter__form-group">
+                                        <div class="filter__slider" style="--min-value: 10%; --max-value: 60%"></div>
+                                    </div>
                                     <div class="filter__form-group filter__form-group-inline">
                                         <div>
                                             <label for="" class="filter__label filter__label--small"> Minimum </label>
-                                            <input type="text" value="$30.00" class="filter__form-input" readonly />
+                                            <input type="text" value="$30.00" class="filter__form-input" />
                                         </div>
                                         <div>
                                             <label for="" class="filter__label filter__label--small"> Maximum </label>
-                                            <input type="text" value="$100.00" class="filter__form-input" readonly />
+                                            <input type="text" value="$100.00" class="filter__form-input" />
                                         </div>
                                     </div>
                                 </div>
+                                <div class="filter__separate"></div>
                                 <!-- Filter col 2 -->
-                                <div class="filter__form-col"></div>
+                                <div class="filter__form-col">
+                                    <label for="" class="filter__label">Size/Weight</label>
+                                    <div class="filter__form-group">
+                                        <div class="filter__form-select-wrap">
+                                            <div class="filter__form-select" style="--width: 158px">
+                                                500g
+                                                <img
+                                                    class="icon filter__form-select-icon"
+                                                    src="./assets/icons/select-arrow.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="filter__form-select">
+                                                Gram
+                                                <img
+                                                    class="icon filter__form-select-icon"
+                                                    src="./assets/icons/select-arrow.svg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__form-group">
+                                        <div class="filter__form-tags">
+                                            <button class="filter__form-tag">Small</button>
+                                            <button class="filter__form-tag">Medium</button>
+                                            <button class="filter__form-tag">Large</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__separate"></div>
                                 <!-- Filter col 3 -->
-                                <div class="filter__form-col"></div>
+                                <div class="filter__form-col">
+                                    <label for="" class="filter__label">Brand</label>
+                                    <div class="filter__form-group">
+                                        <div class="filter__form-search-wrap">
+                                            <input
+                                                placeholder="Search brand name"
+                                                class="filter__form-search"
+                                                type="text"
+                                                name=""
+                                                id=""
+                                            />
+                                            <img
+                                                class="icon filter__form-search-icon"
+                                                src="./assets/icons/search.svg"
+                                                alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="filter__form-group">
+                                        <div class="filter__form-tags">
+                                            <button class="filter__form-tag">Lavazza</button>
+                                            <button class="filter__form-tag">Nescafe</button>
+                                            <button class="filter__form-tag">Starbucks</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="filter__form-action">
+                                <button class="btn btn--text filter__form-cancle">Cancel</button>
+                                <button class="btn btn--primary filter__form-show">Show Result</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
@@ -191,8 +254,9 @@
                                 <a href="#!">
                                     <img class="product__item-img" src="./assets/img/products/product3.png" alt="" />
                                 </a>
-                                <button class="like-btn like-btn--liked product__item-like-btn">
+                                <button class="like-btn product__item-like-btn">
                                     <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
                                 </button>
                             </div>
                             <a href="#!">
@@ -217,8 +281,9 @@
                                 <a href="#!">
                                     <img class="product__item-img" src="./assets/img/products/product4.png" alt="" />
                                 </a>
-                                <button class="like-btn like-btn--liked product__item-like-btn">
+                                <button class="like-btn product__item-like-btn">
                                     <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
                                 </button>
                             </div>
                             <a href="#!"
