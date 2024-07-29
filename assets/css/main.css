@@ -1603,6 +1603,83 @@ html.dark {
   cursor: pointer;
 }
 
+.footer {
+  --marin-item: 10px;
+  padding: 50px 0;
+  background: #eee;
+}
+.footer__row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__top-left {
+  width: 30%;
+}
+.footer__top-right {
+  width: 60%;
+}
+.footer__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer__input {
+  margin: 30px 0 20px 0;
+}
+.footer__input-mail {
+  margin-right: 15px;
+  padding: 10px;
+  width: 250px;
+  height: 45px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.footer__desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.footer__heading {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.41;
+}
+.footer__item {
+  margin-bottom: 20px;
+}
+.footer__link {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.41;
+}
+.footer__label {
+  margin-bottom: 10px;
+  display: block;
+}
+.footer__cta:hover {
+  color: #ffb700;
+}
+.footer__social {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social-link:hover {
+  opacity: 0.8;
+}
+.footer__social-icons {
+  width: 30px;
+  object-fit: cover;
+}
+.footer__row-bot {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -2084,7 +2161,7 @@ html.dark {
 }
 .filter__form {
   border-radius: 20px;
-  padding: 30px;
+  padding: 30px 0;
   position: absolute;
   right: 0;
   top: 50px;
@@ -2093,31 +2170,42 @@ html.dark {
   transition: opacity, visibility;
   transition-duration: 0.25s;
 }
-@media (max-width: 1199.98px) {
-  .filter__form {
-    height: calc(100vh - 100px);
-    overflow-y: auto;
-    padding-bottom: 0;
-    overscroll-behavior: contain;
-  }
-}
 @media (max-width: 575.98px) {
   .filter__form {
-    height: initial;
-    width: 85vw;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
 }
 .filter__form.hide {
   opacity: 0;
   visibility: hidden;
 }
+.filter__form-action, .filter__form-row {
+  padding: 0 30px;
+}
 .filter__form-row {
+  overscroll-behavior: contain;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
   display: flex;
   margin: 30px 0 18px 0;
 }
 @media (max-width: 1199.98px) {
   .filter__form-row {
     flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__form-row {
+    max-height: calc(100vh - 220px);
+  }
+}
+@media (max-width: 575.98px) and (max-width: 575.98px) {
+  .filter__form-row {
+    padding-bottom: 60px;
   }
 }
 .filter__form-group {
@@ -2144,6 +2232,11 @@ html.dark {
   padding: 0 14px;
   min-width: var(--width, 108px);
   height: calc(100% - 10px);
+}
+@media (max-width: 1199.98px) {
+  .filter__form-select {
+    flex: 1;
+  }
 }
 .filter__form-select + .filter__form-select {
   border-left: 1px solid #d2d1d6;
@@ -2210,28 +2303,24 @@ html.dark {
   line-height: 1.46; /* 146.667% */
 }
 .filter__form-action {
+  align-items: center;
   display: flex;
   justify-content: flex-end;
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 575.98px) {
   .filter__form-action {
     position: sticky;
-    bottom: 0;
-    padding-bottom: 20px;
+    bottom: 30px;
     background: var(--filter-form-bg-color);
   }
 }
-@media (max-width: 575.98px) {
-  .filter__form-action {
-    flex: 1;
-  }
-}
-.filter__form-cancle, .filter__form-show {
+.filter__form-cancel, .filter__form-show {
   height: 38px;
   padding: 9px 10px;
 }
 @media (max-width: 575.98px) {
-  .filter__form-cancle, .filter__form-show {
+  .filter__form-cancel, .filter__form-show {
+    height: 45px;
     flex: 1;
   }
 }
@@ -2251,13 +2340,16 @@ html.dark {
   height: 22.75px;
   filter: var(--filter-arrow-color);
 }
-.filter__label {
+.filter__heading {
+  padding: 0 30px;
+}
+.filter__heading, .filter__label {
   display: block;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.45; /* 145.455% */
 }
-.filter__label--small {
+.filter__heading--small, .filter__label--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
   line-height: 1.42;

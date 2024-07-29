@@ -1,0 +1,77 @@
+.footer {
+    --marin-item: 10px;
+    padding: 50px 0;
+    background: #eee;
+    &__row-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__top-left {
+        width: 30%;
+    }
+    &__top-right {
+        width: 60%;
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__input {
+        margin: 30px 0 20px 0;
+    }
+    &__input-mail {
+        margin-right: 15px;
+        padding: 10px;
+        width: 250px;
+        height: 45px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.45;
+    }
+    &__heading {
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.41;
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+    &__link {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.41;
+    }
+    &__label {
+        margin-bottom: 10px;
+        display: block;
+    }
+    &__cta:hover {
+        color: #ffb700;
+    }
+    &__social {
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-link:hover {
+            opacity: 0.8;
+        }
+        &-icons {
+            width: 30px;
+            object-fit: cover;
+        }
+    }
+
+    &__row-bot {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

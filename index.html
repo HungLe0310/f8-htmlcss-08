@@ -20,7 +20,7 @@
         <!-- SCripts -->
         <script src="./assets/js/scripts.js"></script>
     </head>
-    <body style="height: 10000px">
+    <body>
         <!-- Header -->
         <header class="header" id="header">
             <script>
@@ -107,7 +107,7 @@
                         <!-- Filter Form -->
                         <form id="home-filter" class="filter__form hide">
                             <img class="filter__form-arrow" src="./assets/img/filter-bg.png" alt="" />
-                            <h3 class="filter__label">Filter</h3>
+                            <h3 class="filter__heading">Filter</h3>
                             <div class="filter__form-row">
                                 <!-- Filter col 1 -->
                                 <div class="filter__form-col">
@@ -188,7 +188,7 @@
                                 </div>
                             </div>
                             <div class="filter__form-action">
-                                <button class="btn btn--text filter__form-cancle">Cancel</button>
+                                <button class="btn btn--text filter__form-cancel">Cancel</button>
                                 <button class="btn btn--primary filter__form-show">Show Result</button>
                             </div>
                         </form>
@@ -301,13 +301,119 @@
                             </div>
                         </section>
                     </div>
+                    <!-- Product Item 5 -->
+                    <div class="col">
+                        <article class="product__item">
+                            <div class="product__item-image">
+                                <a href="#!">
+                                    <img class="product__item-img" src="./assets/img/products/product4.png" alt="" />
+                                </a>
+                                <button class="like-btn product__item-like-btn">
+                                    <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
+                                </button>
+                            </div>
+                            <a href="#!"
+                                ><h3 class="product__item-heading">
+                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                </h3>
+                            </a>
+                            <p class="product__item-brand">Lavazza</p>
+                            <div class="product__item-row">
+                                <span class="product__item-price">$47.00</span>
+                                <div class="product__item-rate">
+                                    <img class="product__item-star" src="./assets/icons/star.svg" alt="" />
+                                    <span class="product__item-score">4.3</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product Item 6 -->
+                    <div class="col">
+                        <article class="product__item">
+                            <div class="product__item-image">
+                                <a href="#!">
+                                    <img class="product__item-img" src="./assets/img/products/product3.png" alt="" />
+                                </a>
+                                <button class="like-btn like-btn--liked product__item-like-btn">
+                                    <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
+                                </button>
+                            </div>
+                            <a href="#!">
+                                <h3 class="product__item-heading">Lavazza Coffee Blends - Try the Italian Espresso</h3>
+                            </a>
+                            <p class="product__item-brand">Lavazza</p>
+                            <div class="product__item-row">
+                                <span class="product__item-price">$53.00</span>
+                                <div class="product__item-rate">
+                                    <img class="product__item-star" src="./assets/icons/star.svg" alt="" />
+                                    <span class="product__item-score">3.4</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product Item 7 -->
+                    <div class="col">
+                        <article class="product__item">
+                            <div class="product__item-image">
+                                <a href="#!">
+                                    <img class="product__item-img" src="./assets/img/products/product1.png" alt="" />
+                                </a>
+                                <button class="like-btn product__item-like-btn">
+                                    <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
+                                </button>
+                            </div>
+                            <a href="#!">
+                                <h3 class="product__item-heading">
+                                    Lavazza - Caffè Espresso Black Tin - Ground coffee
+                                </h3>
+                            </a>
+                            <p class="product__item-brand">Lavazza</p>
+                            <div class="product__item-row">
+                                <span class="product__item-price">$99.990</span>
+                                <div class="product__item-rate">
+                                    <img class="product__item-star" src="./assets/icons/star.svg" alt="" />
+                                    <span class="product__item-score">5.0</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Product Item 8 -->
+                    <div class="col">
+                        <section class="product__item">
+                            <div class="product__item-image">
+                                <a href="#!">
+                                    <img class="product__item-img" src="./assets/img/products/product2.png" alt="" />
+                                </a>
+                                <button class="like-btn product__item-like-btn">
+                                    <img class="icon like-btn__img" src="./assets/icons/heart.svg" alt="" />
+                                    <img class="like-btn__img-liked" src="./assets/icons/heart-red.svg" alt="" />
+                                </button>
+                            </div>
+                            <a href="#!"
+                                ><h3 class="product__item-heading">
+                                    Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                </h3>
+                            </a>
+                            <p class="product__item-brand">Lavazza</p>
+                            <div class="product__item-row">
+                                <span class="product__item-price">$38.65</span>
+                                <div class="product__item-rate">
+                                    <img class="product__item-star" src="./assets/icons/star.svg" alt="" />
+                                    <span class="product__item-score">4.4</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
-            <footer id="footer">
-                <script>
-                    load("#footer", "./templates/footer.html");
-                </script>
-            </footer>
         </main>
+        <footer class="footer" id="footer">
+            <script>
+                load("#footer", "./templates/footer.html");
+            </script>
+        </footer>
     </body>
 </html>
