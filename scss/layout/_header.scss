@@ -193,6 +193,14 @@
         height: 30px;
         background: var(--top-action-group-separate);
     }
+    &__sign-up {
+        @include abstracts.breakpoint(md) {
+            height: 40px !important;
+            margin-left: 0 !important;
+            font-size: 1.4rem !important;
+            padding: 0 15px !important;
+        }
+    }
 }
 
 .top-action__avatar {

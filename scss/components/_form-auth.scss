@@ -1,0 +1,88 @@
+.form {
+    &__group {
+        margin-top: 30px;
+        &-inline {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__text-input {
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: 1px solid #d2d1d6;
+        padding: 0 12px;
+        &:focus-within {
+            border-color: #0071dc;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        &::placeholder {
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 1.44; /* 144.444% */
+            color: #d2d1d6;
+        }
+        &-img {
+            margin-left: 12px;
+            width: 24px;
+            object-fit: cover;
+        }
+    }
+    &__pull-right {
+        margin-left: auto;
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & [type="checkbox"]:checked ~ &-label::before {
+            background: #ffb700;
+            border-color: #ffb700;
+        }
+        & [type="checkbox"]:checked ~ &-label::after {
+            position: absolute;
+            top: 6px;
+            left: 3px;
+            rotate: -45deg;
+            width: 12px;
+            height: 6px;
+            border-left: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+        }
+        &-label {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.46; /* 146.667% */
+            color: #9e9da8;
+            &::after,
+            &::before {
+                content: "";
+                display: inline-block;
+            }
+            &::before {
+                margin-right: 10px;
+                width: 18.5px;
+                height: 18.5px;
+                border: 1.5px solid #9e9da8;
+                border-radius: 5px;
+            }
+        }
+    }
+    &__recovery {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+        color: #0071dc;
+    }
+}
