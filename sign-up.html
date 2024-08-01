@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grocery Mart</title>
+        <title>Sign up | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -52,27 +52,65 @@
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input placeholder="Email" class="form__input" type="email" name="" id="" />
+                                <input
+                                    placeholder="Email"
+                                    class="form__input"
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    required
+                                    value="abc@gmail.com"
+                                />
                                 <img class="form__input-img" src="./assets/icons/message.svg" alt="" />
+                                <img
+                                    class="form__input-img form__warning"
+                                    src="./assets/icons/auth-warning.svg"
+                                    alt=""
+                                />
                             </div>
-                        </div>
-                        <div class="form__group">
-                            <div class="form__text-input">
-                                <input placeholder="Password" class="form__input" type="password" name="" id="" />
-                                <img class="form__input-img" src="./assets/icons/lock.svg" alt="" />
-                            </div>
+                            <p class="form__warning-text">Email không đúng định dạng !</p>
                         </div>
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input
+                                    value="111111"
+                                    placeholder="Password"
+                                    class="form__input"
+                                    type="password"
+                                    name=""
+                                    id=""
+                                    required
+                                    minlength="6"
+                                />
+                                <img class="form__input-img" src="./assets/icons/lock.svg" alt="" />
+                                <img
+                                    class="form__input-img form__warning"
+                                    src="./assets/icons/auth-warning.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <p class="form__warning-text">Mật khẩu cần phải có 6 ký tự !</p>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    value="111111"
                                     placeholder="Confirm Password"
                                     class="form__input"
                                     type="password"
                                     name=""
                                     id=""
+                                    required
+                                    minlength="6"
                                 />
                                 <img class="form__input-img" src="./assets/icons/lock.svg" alt="" />
+                                <img
+                                    class="form__input-img form__warning"
+                                    src="./assets/icons/auth-warning.svg"
+                                    alt=""
+                                />
                             </div>
+                            <p class="form__warning-text">Mật khẩu cần phải có 6 ký tự !</p>
                         </div>
                         <div class="form__group form__group-inline">
                             <div class="form__checkbox">
@@ -87,19 +125,18 @@
                                     Set as default card
                                 </label>
                             </div>
-                            <a href="#!" class="form__recovery form__pull-right">Recovery Password</a>
                         </div>
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn">Sign Up</button>
+                            <button class="btn btn--primary auth__btn auth__btn-sign-up">Sign Up</button>
                             <button class="btn btn--outline auth__btn btn-no-margin">
-                                <img class="btn__icon" src="./assets/icons/google-icon.svg" alt="" />
+                                <img class="btn__icon icon" src="./assets/icons/google-icon.svg" alt="" />
                                 Sign in with Gmail
                             </button>
                         </div>
                         <div class="auth__text-link">
                             <p class="auth__text">
-                                You have an account yet?
-                                <a href="#!" class="auth__link form__recovery">Sign In </a>
+                                You have an account ?
+                                <a href="./sign-in.html" class="auth__link form__recovery">Sign In </a>
                             </p>
                         </div>
                     </form>

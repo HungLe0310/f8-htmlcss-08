@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .form {
     &__group {
         margin-top: 30px;
@@ -5,7 +7,22 @@
             display: flex;
             align-items: center;
         }
+        &:has(:invalid):has(.form__input:not(:placeholder-shown)) {
+            .form__text-input {
+                border-color: red;
+                background: rgba($color: red, $alpha: 0.1);
+            }
+            .form__input-img {
+                display: none;
+            }
+            .form__warning,
+            .form__warning-text {
+                animation: shake 0.4s;
+                display: block;
+            }
+        }
     }
+
     &__text-input {
         height: 48px;
         display: flex;
@@ -24,17 +41,34 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44; /* 144.444% */
+        @include abstracts.breakpoint(md) {
+            font-size: 1.6rem;
+        }
         &::placeholder {
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.44; /* 144.444% */
             color: #d2d1d6;
+            @include abstracts.breakpoint(md) {
+                font-size: 1.6rem;
+            }
         }
         &-img {
             margin-left: 12px;
             width: 24px;
             object-fit: cover;
         }
+    }
+    &__warning-text {
+        display: none;
+        margin-top: 10px;
+        color: red;
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__warning {
+        display: none;
     }
     &__pull-right {
         margin-left: auto;

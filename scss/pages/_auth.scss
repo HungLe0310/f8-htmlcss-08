@@ -3,12 +3,16 @@
 .auth {
     display: flex;
     min-height: 100vh;
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
     &__intro,
     &__content {
         flex: 1;
         padding: 0 30px;
     }
     &__intro {
+        background: var(--auth-intro-bg-color);
         position: relative;
         gap: 50px;
         display: flex;
@@ -29,17 +33,24 @@
         }
         &-img {
             width: min(422px, 100%);
+            @include abstracts.breakpoint(md) {
+                width: min(313px, 100%);
+            }
         }
         &-text {
+            color: var(--auth-intro-text-color);
             text-align: center;
             max-width: 412px;
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 1.44; /* 144.444% */
+            @include abstracts.breakpoint(md) {
+                font-size: 1.5rem;
+            }
         }
     }
     &__content {
-        background: #fff;
+        background: var(--auth-content-bg-color);
         @include abstracts.breakpoint(md) {
             position: fixed;
             overflow-y: auto;
@@ -57,6 +68,10 @@
             margin: 0 auto;
             text-align: center;
             padding: 50px 0;
+            @include abstracts.breakpoint(md) {
+                width: min(315px, 100%);
+                padding: 80px 0 50px 0;
+            }
         }
     }
     &__heading {
@@ -64,6 +79,9 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.46; /* 146.667% */
+        @include abstracts.breakpoint(md) {
+            font-size: 2.2rem;
+        }
     }
     &__desc {
         padding: 0 30px;
@@ -72,10 +90,18 @@
         font-weight: 500;
         line-height: 1.46; /* 146.667% */
         color: #9e9da8;
+        @include abstracts.breakpoint(md) {
+            font-size: 1.4rem;
+            padding: 0 20px;
+        }
     }
     &__form {
         margin-top: 30px;
         width: 100%;
+        &:has(:invalid) .auth__btn-sign-up {
+            opacity: 0.5;
+            pointer-events: none;
+        }
     }
     &__btn-group {
         display: flex;
@@ -91,6 +117,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include abstracts.breakpoint(md) {
+            margin-top: 56px;
+        }
     }
     &__text {
         font-size: 1.8rem;
