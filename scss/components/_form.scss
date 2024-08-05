@@ -119,4 +119,87 @@
         line-height: 1.46; /* 146.667% */
         color: #0071dc;
     }
+    &__label {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+        &--small {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            line-height: 1.42;
+        }
+    }
+    &__slider {
+        margin: 30px 0;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background: #d2d1d6;
+    }
+    &__slider::before,
+    &__slider::after {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        display: inline-block;
+        content: "";
+        width: 22px;
+        height: 22px;
+        border: 6px solid #ffb700;
+        border-radius: 50%;
+
+        background: var(--filter-form-bg-color);
+    }
+    &__slider::after {
+        left: var(--min-value);
+    }
+    &__slider::before {
+        left: var(--max-value);
+    }
+    &__select-wrap {
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+    }
+    &__select {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px;
+        min-width: var(--width, 108px);
+        height: calc(100% - 10px);
+        @include abstracts.breakpoint(xl) {
+            flex: 1;
+        }
+    }
+    &__select + &__select {
+        border-left: 1px solid #d2d1d6;
+    }
+    &__tags {
+        flex-wrap: wrap;
+        display: flex;
+        gap: 20px;
+        @include abstracts.breakpoint(sm) {
+            gap: 9px;
+        }
+    }
+    &__tag {
+        padding: 6px 12px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+        color: #9e9da8;
+        background: var(--filter-tag-bg-color);
+        border-radius: 6px;
+        transition: color 0.2s;
+        &:hover {
+            color: var(--text-color);
+        }
+    }
 }
