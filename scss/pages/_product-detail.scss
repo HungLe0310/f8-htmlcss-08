@@ -1,20 +1,32 @@
 @use "../abstracts";
 
 .product-detail {
+    padding: 30px;
     display: flex;
     flex-direction: column;
     background: var(--product-detail-bg-color);
 }
 .product__content {
     margin-top: 30px;
+    @include abstracts.breakpoint(md) {
+        margin-top: 20px;
+    }
 }
-
+.product__content-info {
+    @include abstracts.breakpoint(md) {
+        border-radius: 20px;
+        background: var(--prod-content-info-bg);
+        box-shadow: 0px 20px 60px 10px var(--prod-content-info-shadow);
+    }
+}
 .prod-preview {
     padding: 0 30px;
     @include abstracts.breakpoint(lg) {
         display: flex;
         flex-direction: row-reverse;
-        padding-left: 0;
+    }
+    @include abstracts.breakpoint(md) {
+        padding: 16px 16px 0 16px;
     }
     &__img {
         @include abstracts.breakpoint(lg) {
@@ -56,7 +68,7 @@
             opacity: 0.8;
             transition: opacity border-color;
             transition-duration: 0.3;
-            &:hover {
+            &:not(&--current):hover {
                 opacity: 1;
                 border-color: #000;
             }
@@ -69,13 +81,18 @@
 }
 .prod-info {
     &__content {
-        background: #f6f6f6;
+        background: var(--prod-info-bg);
         padding: 60px;
         @include abstracts.breakpoint(xxl) {
             padding: 20px;
         }
         @include abstracts.breakpoint(lg) {
             margin-top: 30px;
+        }
+        @include abstracts.breakpoint(md) {
+            border-radius: 20px;
+            margin-top: 0;
+            padding: 16px;
         }
     }
     &__heading {
@@ -88,6 +105,9 @@
     display: flex;
     margin-top: 30px;
     gap: 16px;
+    @include abstracts.breakpoint(md) {
+        margin-top: 16px;
+    }
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
@@ -110,6 +130,9 @@
     margin-left: 30px;
     @include abstracts.breakpoint(xxl) {
         margin-left: 10px;
+    }
+    @include abstracts.breakpoint(xl) {
+        margin-left: 0;
     }
 }
 
@@ -148,5 +171,77 @@
     }
     &-add {
         flex: 1;
+    }
+}
+
+.prod__tab {
+    &-list {
+        display: flex;
+        gap: 60px;
+    }
+    &-item {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+        color: #9e9da8;
+        &--current {
+            color: inherit;
+        }
+    }
+    &-contents {
+        padding-top: 30px;
+    }
+    &-content {
+        display: none;
+        &--current {
+            display: block;
+        }
+    }
+    &-heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41; /* 141.667% */
+    }
+}
+.prod__reviews {
+    padding-top: 30px;
+}
+.prod__review {
+    padding: 30px;
+    border-radius: 16px;
+    background: #fafafd;
+}
+.prod__user {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    &-img {
+        height: 80px;
+        object-fit: cover;
+    }
+    &-name {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+    }
+    &-desc {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5; /* 150% */
+    }
+}
+.prod__rate {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-star {
+        width: 150px;
+    }
+    &-point {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
     }
 }

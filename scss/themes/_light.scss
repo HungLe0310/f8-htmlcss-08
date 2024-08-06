@@ -41,7 +41,6 @@ html {
     // Filter form
     --filter-form-bg-color: #fff;
     --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
-    --filter-tag-bg-color: #f8f8fb;
 
     // Footer
 
@@ -51,10 +50,24 @@ html {
     --auth-intro-text-color: #1a162e;
     --auth-content-bg-color: #fff;
 
+    // form
+
+    --form-tag-bg-color: #f8f8fb;
+
     // Product detail
     --product-detail-bg-color: #fff;
+    --prod-info-bg: #f6f6f6;
+    @include abstracts.breakpoint(md) {
+        --product-detail-bg-color: #fafafd;
+        --prod-info-bg: #fff;
+    }
+    --prod-content-info-bg: #fff;
+    --prod-content-info-shadow: rgba(237, 237, 246, 0.2);
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+    @include abstracts.breakpoint(md) {
+        --breadcrumbs-bg-color: #fff;
+    }
 }

@@ -30,6 +30,18 @@
         <main class="product-detail">
             <div class="container">
                 <div class="product__content">
+                    <div class="product__search search d-none d-md-flex">
+                        <input
+                            placeholder="Search for item"
+                            class="product__search-input search-input"
+                            type="text"
+                            name=""
+                            id=""
+                        />
+                        <img class="icon product__search-icon search-icon" src="./assets/icons/search.svg" alt="" />
+                    </div>
+                </div>
+                <div class="product__content">
                     <div class="breadcrumbs">
                         <ul class="breadcrumbs__content">
                             <li class="breadcrumbs__item">
@@ -56,7 +68,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product__content">
+                <div class="product__content product__content-info">
                     <div class="row">
                         <div class="col-5 col-lg-12">
                             <div class="prod-preview">
@@ -90,7 +102,7 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="prod-preview__thumb">
+                                <div class="prod-preview__thumb d-md-none">
                                     <img
                                         class="prod-preview__thumb-img prod-preview__thumb-img--current"
                                         src="./assets/img/products/product1.png"
@@ -163,7 +175,7 @@
                                                     <img
                                                         src="./assets/icons/document.svg"
                                                         alt=""
-                                                        class="prod-property__icon"
+                                                        class="icon prod-property__icon"
                                                     />
                                                     <div class="prod-property__text">
                                                         <h4 class="prod-property__title">Compare</h4>
@@ -173,7 +185,7 @@
                                                     <img
                                                         src="./assets/icons/buy.svg"
                                                         alt=""
-                                                        class="prod-property__icon"
+                                                        class="icon prod-property__icon"
                                                     />
                                                     <div class="prod-property__text">
                                                         <h4 class="prod-property__title">Delivery</h4>
@@ -184,7 +196,7 @@
                                                     <img
                                                         src="./assets/icons/bag.svg"
                                                         alt=""
-                                                        class="prod-property__icon"
+                                                        class="icon prod-property__icon"
                                                     />
                                                     <div class="prod-property__text">
                                                         <h4 class="prod-property__title">Pickup</h4>
@@ -201,7 +213,7 @@
                                                         <button class="btn btn--primary prod__card-add">
                                                             Add to cart
                                                         </button>
-                                                        <button class="btn btn--outline">
+                                                        <button class="icon btn btn--outline">
                                                             <img src="./assets/icons/heart.svg" alt="" />
                                                         </button>
                                                     </div>
@@ -211,6 +223,91 @@
                                     </div>
                                 </section>
                             </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__content">
+                    <div class="prod__tab">
+                        <ul class="prod__tab-list">
+                            <li class="prod__tab-item">Description</li>
+                            <li class="prod__tab-item">Features</li>
+                            <li class="prod__tab-item prod__tab-item--current">Review (1100)</li>
+                            <li class="prod__tab-item">Similar</li>
+                        </ul>
+                        <div class="prod__tab-contents">
+                            <div class="prod__tab-content">Content1</div>
+                            <div class="prod__tab-content">Content2</div>
+                            <div class="prod__tab-content prod__tab-content--current">
+                                <h2 class="prod__tab-heading">What our customers are saying</h2>
+                                <div class="prod__reviews">
+                                    <div class="row row-cols-3">
+                                        <div class="col">
+                                            <div class="prod__review">
+                                                <div class="prod__user">
+                                                    <img
+                                                        class="prod__user-img"
+                                                        src="./assets/img/users/user1.png"
+                                                        alt=""
+                                                    />
+                                                    <div class="prod__user-text">
+                                                        <h3 class="prod__user-name">Jakir Hussen</h3>
+                                                        <p class="prod__user-desc">
+                                                            Great product, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="prod__rate">
+                                                    <img src="./assets/img/Star.png" alt="" class="prod__rate-star" />
+                                                    <span class="prod__rate-point">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="prod__review">
+                                                <div class="prod__user">
+                                                    <img
+                                                        class="prod__user-img"
+                                                        src="./assets/img/users/user2.png"
+                                                        alt=""
+                                                    />
+                                                    <div class="prod__user-text">
+                                                        <h3 class="prod__user-name">Jubed Ahmed</h3>
+                                                        <p class="prod__user-desc">
+                                                            Awesome Coffee, I love this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="prod__rate">
+                                                    <img src="./assets/img/Star.png" alt="" class="prod__rate-star" />
+                                                    <span class="prod__rate-point">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="prod__review">
+                                                <div class="prod__user">
+                                                    <img
+                                                        class="prod__user-img"
+                                                        src="./assets/img/users/user3.png"
+                                                        alt=""
+                                                    />
+                                                    <div class="prod__user-text">
+                                                        <h3 class="prod__user-name">JDelwar Hussain</h3>
+                                                        <p class="prod__user-desc">
+                                                            Great product, I like this Coffee Beans
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="prod__rate">
+                                                    <img src="./assets/img/Star.png" alt="" class="prod__rate-star" />
+                                                    <span class="prod__rate-point">(3.5) Review</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod__tab-content">Content4</div>
                         </div>
                     </div>
                 </div>

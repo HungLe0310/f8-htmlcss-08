@@ -25,6 +25,7 @@
         align-items: center;
         @include abstracts.breakpoint(md) {
             font-size: 1.4rem;
+            height: 20px;
         }
     }
     &__item:last-child &__link {

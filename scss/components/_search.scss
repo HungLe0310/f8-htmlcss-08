@@ -1,0 +1,25 @@
+.search {
+    padding: 0 15px;
+    border-radius: 10px;
+    background: var(--prod-content-info-bg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-input {
+        flex: 1;
+        height: 50px;
+    }
+    &-input,
+    &-input::placeholder {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+    }
+    &-input::placeholder {
+        color: #9e9da8;
+    }
+    &-icon {
+        margin-left: 10px;
+    }
+}
