@@ -14,7 +14,7 @@
             <button class="navbar__return js-toggle" toggle-target="#navbar">
                 <img src="./assets/icons/arrow-letf.svg" alt="" class="icon navbar__return-icon" />
             </button>
-            <a href="#!" class="nav__btn d-none d-md-flex">
+            <a href="./checkout.html" class="nav__btn d-none d-md-flex">
                 <img src="./assets/icons/buy.svg" alt="" class="icon nav__btn-icon" />
                 <span class="nav__btn-title">Card</span>
                 <span class="nav__btn-qnt">3</span>
@@ -970,15 +970,158 @@
                 </button>
             </div>
             <div class="top-action__group d-md-none">
-                <button class="top-action__btn">
-                    <img src="./assets/icons/heart.svg" alt="" class="icon top-action__img" />
-                    <span class="top-action__title">03</span>
-                </button>
+                <div class="top-action__btn-wrap">
+                    <button class="top-action__btn">
+                        <img src="./assets/icons/heart.svg" alt="" class="icon top-action__img" />
+                        <span class="top-action__title">03</span>
+                    </button>
+                    <!-- ACtion dropdown -->
+                    <div class="act-dropdown">
+                        <section class="act-dropdown__inner">
+                            <img src="./assets/img/filter-bg.png" class="act-dropdown__arrow-top" alt="" />
+
+                            <div class="act-dropdown__top">
+                                <h2 class="act-dropdown__top-title">You have 3 item</h2>
+                                <a class="act-dropdown__top-link" href="#!"> See All </a>
+                            </div>
+                            <div class="row row-cols-3 cart-preview-item__list">
+                                <!-- Cart preview item 1 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                                <!-- Cart preview item 2 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product2.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                                <!-- Cart preview item 3 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product3.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="act-dropdown-separate"></div>
+                            <div class="act-dropdown__btn">
+                                <a class="btn btn--primary btn--rounded act-dropdown__checkout">Check Out All</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
                 <div class="top-action__separate"></div>
-                <button class="top-action__btn">
-                    <img src="./assets/icons/buy.svg" alt="" class="icon top-action__img" />
-                    <span class="top-action__title">$65.42</span>
-                </button>
+                <div class="top-action__btn-wrap">
+                    <button class="top-action__btn top-action__btn-buy">
+                        <img src="./assets/icons/buy.svg" alt="" class="icon top-action__img" />
+                        <span class="top-action__title">$65.42</span>
+                    </button>
+                    <!-- ACtion dropdown -->
+                    <div class="act-dropdown">
+                        <section class="act-dropdown__inner">
+                            <img src="./assets/img/filter-bg.png" class="act-dropdown__arrow-top" alt="" />
+
+                            <div class="act-dropdown__top">
+                                <h2 class="act-dropdown__top-title">You have 3 item</h2>
+                                <a class="act-dropdown__top-link" href="./checkout.html"> See All </a>
+                            </div>
+                            <div class="row row-cols-3 cart-preview-item__list">
+                                <!-- Cart preview item 1 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                                <!-- Cart preview item 2 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product2.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                                <!-- Cart preview item 3 -->
+                                <div class="col">
+                                    <figure class="cart-preview-item">
+                                        <div class="cart-preview-item__img">
+                                            <img
+                                                class="cart-preview-item__thumb"
+                                                src="./assets/img/products/product3.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <h3 class="cart-preview-item__title">Lavazza Coffee Blends</h3>
+                                        <span class="cart-preview-item__price">$329.00</span>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__bot">
+                                <div class="act-dropdown__bot-row">
+                                    <span class="act-dropdown__bot-label">Subtotal:</span>
+                                    <span class="act-dropdown__bot-value">$415.99</span>
+                                </div>
+                                <div class="act-dropdown__bot-row">
+                                    <span class="act-dropdown__bot-label">Texes:</span>
+                                    <span class="act-dropdown__bot-value">Free</span>
+                                </div>
+                                <div class="act-dropdown__bot-row">
+                                    <span class="act-dropdown__bot-label">Shipping</span>
+                                    <span class="act-dropdown__bot-value">$10.00</span>
+                                </div>
+                                <div class="act-dropdown__bot-row">
+                                    <span class="act-dropdown__bot-label act-dropdown__bot-label--bold">
+                                        Total Price
+                                    </span>
+                                    <span class="act-dropdown__bot-value act-dropdown__bot-value--bold">$425.99</span>
+                                </div>
+                            </div>
+                            <div class="act-dropdown__btn">
+                                <a href="./checkout.html" class="btn btn--primary btn--rounded act-dropdown__checkout">
+                                    Check Out All
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div class="top-action__user">
                 <img src="./assets/img/avatar-user.jpg" alt="" class="top-action__avatar" />

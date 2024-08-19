@@ -80,7 +80,7 @@ $grid-gutter-width: 30px !default;
     }
 }
 @mixin make-offset($infix: null) {
-    @for $i from 1 to $grid-columns {
+    @for $i from 0 to $grid-columns {
         .offset#{$infix}-#{$i} {
             margin-left: math.div(100%, $grid-columns) * $i;
         }

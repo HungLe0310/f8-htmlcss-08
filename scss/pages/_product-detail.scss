@@ -177,13 +177,26 @@
 .prod__tab {
     &-list {
         display: flex;
-        gap: 60px;
+        flex-wrap: wrap;
+        @include abstracts.breakpoint(sm) {
+            gap: 20px;
+        }
     }
     &-item {
+        white-space: nowrap;
+        padding: 8px 30px;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.45; /* 145.455% */
         color: #9e9da8;
+        cursor: pointer;
+        @include abstracts.breakpoint(md) {
+            font-size: 1.8rem;
+        }
+        @include abstracts.breakpoint(sm) {
+            padding: 8px 5px;
+            font-size: 1.4rem;
+        }
         &--current {
             color: inherit;
         }
@@ -198,23 +211,46 @@
         }
     }
     &-heading {
+        padding-bottom: 30px;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41; /* 141.667% */
     }
 }
-.prod__reviews {
-    padding-top: 30px;
-}
+
 .prod__review {
     padding: 30px;
     border-radius: 16px;
-    background: #fafafd;
+    background: var(--prod-review-bg-color);
+    height: 100%;
+    @include abstracts.breakpoint(xl) {
+        display: flex;
+        flex-direction: column;
+    }
+    @include abstracts.breakpoint(md) {
+        background: var(--prod-review-bg-color);
+    }
 }
 .prod__user {
     gap: 20px;
     display: flex;
     align-items: center;
+    @include abstracts.breakpoint(xl) {
+        flex-direction: column;
+    }
+    @include abstracts.breakpoint(md) {
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+    &-text {
+        @include abstracts.breakpoint(xl) {
+            text-align: center;
+        }
+        @include abstracts.breakpoint(md) {
+            text-align: left;
+        }
+    }
     &-img {
         height: 80px;
         object-fit: cover;
@@ -232,14 +268,23 @@
     }
 }
 .prod__rate {
+    flex-wrap: wrap;
     margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 20px;
+    @include abstracts.breakpoint(xl) {
+        flex-direction: column;
+        margin-top: auto;
+    }
+    @include abstracts.breakpoint(md) {
+        flex-direction: row;
+    }
     &-star {
         width: 150px;
     }
     &-point {
+        white-space: nowrap;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44; /* 144.444% */

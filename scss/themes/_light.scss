@@ -13,7 +13,12 @@ html {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
-
+    // Header
+    --act-dropdown-bg-color: #fff;
+    --act-dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+    --cart-pre-item-bg-color: #fff;
+    --cart-pre-item-border-color: #ebebeb;
+    --act-dropdown-bot-border-color: #d2d1d6;
     //dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -29,7 +34,8 @@ html {
     @include abstracts.breakpoint(md) {
         --cate-item-bg-color: #fff;
     }
-
+    // BTN
+    --btn-text-color: #fff;
     // Filter Btn
     --filter-btn-bg-color: #fff;
     --filter-btn-text-color: #6c6c72;
@@ -57,9 +63,11 @@ html {
     // Product detail
     --product-detail-bg-color: #fff;
     --prod-info-bg: #f6f6f6;
+    --prod-review-bg-color: #fafafd;
     @include abstracts.breakpoint(md) {
         --product-detail-bg-color: #fafafd;
         --prod-info-bg: #fff;
+        --prod-review-bg-color: #fff;
     }
     --prod-content-info-bg: #fff;
     --prod-content-info-shadow: rgba(237, 237, 246, 0.2);
@@ -70,4 +78,13 @@ html {
     @include abstracts.breakpoint(md) {
         --breadcrumbs-bg-color: #fff;
     }
+
+    // checkout
+    --breadcrumbs-checkout-bg: #fff;
+    --cart-info-bg-color: #fff;
+    --cart-info-shadow-bg: rgba(237, 237, 246, 0.2);
+    --cart-item-border-color: #d2d1d6;
+    --cart-info-btn-color: #9e9da8;
+    --cart-info-separate: #d2d1d6;
+    --cart-info-gift-bg-color: rgba(118, 68, 225, 0.1);
 }

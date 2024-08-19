@@ -20,7 +20,6 @@
         line-height: 1.5; /* 150% */
         color: #9e9da8;
         gap: 8px;
-        height: 64px;
         display: flex;
         align-items: center;
         @include abstracts.breakpoint(md) {
