@@ -41,6 +41,17 @@
             }
         }
     }
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41; /* 141.667% */
+        @include abstracts.breakpoint(md) {
+            font-size: 2.1rem;
+        }
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.6rem;
+        }
+    }
 
     &__img {
         width: 175px;
@@ -139,7 +150,6 @@
         height: 44px;
     }
     &__bottom {
-        padding-bottom: 30px;
         margin-top: 30px;
         &-continue {
             height: 100%;
@@ -161,6 +171,11 @@
             rotate: 90deg;
             transition: translate 0.15s;
         }
+        &-btn {
+            margin-left: auto;
+            padding: 0 40px;
+            height: 68px;
+        }
     }
     &__separate {
         margin: 30px 0;
@@ -173,15 +188,12 @@
         justify-content: space-between;
         margin-top: 10px;
         font-size: 1.8rem;
-        font-weight: 500;
+        font-weight: 700;
         line-height: 1.4; /* 144.444% */
         &--bold {
             font-size: 2.2rem;
             font-weight: 700;
         }
-    }
-    &__detail-price {
-        padding: 30px;
     }
     &__link {
         font-size: 1.8rem;
@@ -219,10 +231,125 @@
         align-items: center;
         gap: 20px;
     }
+    &__sub-title {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
 }
 .cart-info + .cart-info {
     margin-top: 30px;
 }
 .checkout.footer {
     margin-top: 40px;
+}
+
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include abstracts.breakpoint(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__title,
+    &__btn {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.6rem;
+        }
+    }
+    &__btn {
+        @include abstracts.breakpoint(md) {
+            margin-top: 16px;
+        }
+    }
+    &__desc {
+        margin-top: 5px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.46; /* 146.667% */
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.card-address {
+    margin-top: 30px;
+    &__item {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        @include abstracts.breakpoint(md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__left {
+        gap: 16px;
+        display: flex;
+    }
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.6rem;
+        }
+    }
+    &__address {
+        width: min(550px, 90%);
+        margin-top: 5px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.46; /* 146.667% */
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.4rem;
+        }
+    }
+    &__list {
+        padding-left: 6px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.42; /* 142.857% */
+        list-style: disc inside;
+        margin-top: 20px;
+        display: flex;
+        gap: 30px;
+    }
+    &__right {
+        display: flex;
+        @include abstracts.breakpoint(md) {
+            margin-top: 16px;
+        }
+    }
+    &__edit {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.44; /* 144.444% */
+        gap: 10px;
+        align-items: center;
+        display: flex;
+        align-self: flex-end;
+    }
+    &__input {
+        appearance: none;
+        &::before {
+            content: url(../icons/unchecked.svg);
+        }
+        &:checked::before {
+            content: url(../icons/checked.svg);
+        }
+    }
+}
+
+.shipping__coutinue {
+    display: flex;
+    align-items: center;
 }

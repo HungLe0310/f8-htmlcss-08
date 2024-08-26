@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Check Out | Grocery Mart</title>
+        <title>Shipping | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -52,9 +52,15 @@
                                     <img src="./assets/icons/arrow-right.svg" alt="" />
                                 </a>
                             </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#!">
+                                    checkout
+                                    <img src="./assets/icons/arrow-right.svg" alt="" />
+                                </a>
+                            </li>
 
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#!"> checkout </a>
+                                <a class="breadcrumbs__link" href="#!"> shipping</a>
                             </li>
                         </ul>
                     </div>
@@ -64,6 +70,88 @@
                         <div class="col-8 col-xl-12">
                             <!-- cart info list -->
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">1. Shipping, arrives between Mon, May 16—Tue, May 24</h1>
+                                <div class="cart-info__separate"></div>
+                                <div class="user-address">
+                                    <div class="user-address__top">
+                                        <div class="user-address__top-text">
+                                            <h2 class="user-address__title">Shipping address</h2>
+                                            <p class="user-address__desc">Where should we deliver your order?</p>
+                                        </div>
+                                        <button
+                                            class="btn btn--primary btn--rounded user-address__btn js-toggle"
+                                            toggle-target="#add-address"
+                                        >
+                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            Add a new address
+                                        </button>
+                                    </div>
+                                    <div class="card-address">
+                                        <!-- card address item 1 -->
+                                        <div class="card-address__item">
+                                            <div class="card-address__left">
+                                                <div class="card-address__choose">
+                                                    <label class="card-address__label">
+                                                        <input
+                                                            type="radio"
+                                                            class="card-address__input"
+                                                            name="card-address__input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="card-address__info">
+                                                    <h3 class="card-address__name">Imran Khan</h3>
+                                                    <p class="card-address__address">
+                                                        Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+                                                    </p>
+                                                    <ul class="card-address__list">
+                                                        <li class="card-address__deli">Shipping</li>
+                                                        <li class="card-address__deli">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-address__right">
+                                                <button class="card-address__edit">
+                                                    <img src="./assets/icons/write.svg" alt="" />
+                                                    <span class="card-address__action">Edit</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- card address item 2 -->
+                                        <div class="card-address__item">
+                                            <div class="card-address__left">
+                                                <div class="card-address__choose">
+                                                    <label class="card-address__label">
+                                                        <input
+                                                            type="radio"
+                                                            class="card-address__input"
+                                                            name="card-address__input"
+                                                        />
+                                                    </label>
+                                                </div>
+                                                <div class="card-address__info">
+                                                    <h3 class="card-address__name">Imran Khan</h3>
+                                                    <p class="card-address__address">
+                                                        Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet,
+                                                        Sylhet, Bangladesh
+                                                    </p>
+                                                    <ul class="card-address__list">
+                                                        <li class="card-address__deli">Shipping</li>
+                                                        <li class="card-address__deli">Delivery from store</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-address__right">
+                                                <button class="card-address__edit">
+                                                    <img src="./assets/icons/write.svg" alt="" />
+                                                    <span class="card-address__action">Edit</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-info__separate"></div>
+                                <h2 class="cart-info__sub-title">Items details</h2>
                                 <div class="cart-info__list">
                                     <!-- cart item 1 -->
                                     <section class="cart-info__item">
@@ -184,7 +272,7 @@
                                     </section>
                                 </div>
                                 <div class="cart-info__bottom d-md-none">
-                                    <div class="row">
+                                    <div class="row shipping__coutinue">
                                         <div class="col-8 col-xxl-7">
                                             <div class="cart-info__bottom-continue">
                                                 <a class="cart-info__bottom-link" href="./">
@@ -198,19 +286,9 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-xxl-5">
-                                            <div class="cart-info__row">
-                                                <span>Subtotal:</span>
-                                                <span>$191.65</span>
-                                            </div>
-                                            <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$10.00</span>
-                                            </div>
-                                            <div class="cart-info__separate"></div>
-                                            <div class="cart-info__row cart-info__row--bold">
-                                                <span>Total:</span>
-                                                <span>$201.65</span>
-                                            </div>
+                                            <button class="btn btn--primary btn--rounded cart-info__bottom-btn">
+                                                Continue
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -236,23 +314,6 @@
                                         <span>Estimated Total</span>
                                         <span>$201.65</span>
                                     </div>
-
-                                    <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__link">
-                                        Continue to checkout
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="cart-info">
-                                <div class="cart-info__gift">
-                                    <div class="cart-info__gift-thumb">
-                                        <img class="cart-info__gift-icon" src="./assets/icons/gift.svg" alt="" />
-                                    </div>
-                                    <div class="cart-info__gift-text">
-                                        <h3 class="cart-info__gift-title">Send this order as a gift.</h3>
-                                        <p class="cart-info__gift-desc">
-                                            Available items will be shipped to your gift recipient.
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +329,7 @@
 
         <!--Modal -->
 
-        <div id="delete-confirm" class="modal hide">
+        <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
                 <p class="modal__text">Do you want to delete the product?</p>
                 <div class="modal__bottom">
@@ -283,7 +344,149 @@
                     </button>
                 </div>
             </div>
-            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay"></div>
+        </div>
+        <!-- Add Address -->
+        <div id="add-address" class="modal show" style="--modal-width: 700px">
+            <div class="modal__content">
+                <h2 class="form__title modal__heading">Add a new shipping address :</h2>
+                <form class="form modal__content-inline">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label form__label--small"> Name </label>
+                            <div class="form__text-input">
+                                <input
+                                    placeholder="Name"
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    required
+                                    minlength="2"
+                                />
+                            </div>
+                            <p class="form__warning-text">Your Name requires at least 2 characters</p>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone" class="form__label form__label--small"> Phone </label>
+                            <div class="form__text-input">
+                                <input
+                                    placeholder="Phone"
+                                    class="form__input"
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    required
+                                    minlength="11"
+                                />
+                            </div>
+                            <p class="form__warning-text">Your phone requires at least 11 characters</p>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="address" class="form__label form__label--small"> Address </label>
+                        <div class="form__text-area">
+                            <textarea
+                                id="address"
+                                name="address"
+                                placeholder="Address (City/Province/Street)"
+                                class="form__text-area-input"
+                                required
+                            ></textarea>
+                        </div>
+                        <p class="form__warning-text">Address not empty</p>
+                    </div>
+                    <div class="form__group">
+                        <label for="city" class="form__label form__label--small"> City/Province/District </label>
+                        <div class="form__text-input">
+                            <input
+                                placeholder="City/Province/District"
+                                class="form__input"
+                                type="text"
+                                name="city"
+                                id="city"
+                                required
+                                minlength="10"
+                            />
+                            <img class="form__input-img form__warning" src="./assets/icons/auth-warning.svg" alt="" />
+
+                            <!-- City dialog -->
+                            <div id="select-city" class="form__select-dialog hide">
+                                <!-- <h2 class="form__dialog-heading">City/Province/District</h2> -->
+                                <div class="form__search">
+                                    <input
+                                        placeholder="Search"
+                                        type="search"
+                                        name=""
+                                        id=""
+                                        class="form__dialog-input"
+                                    />
+                                    <img class="form__search-icon" src="./assets/icons/search.svg" alt="" />
+                                </div>
+                                <ul class="form__dialog-list">
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item form__dialog-item--select">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                    <li class="form__dialog-item">Ha Noi</li>
+                                    <li class="form__dialog-item">Ho Chi Minh</li>
+                                    <li class="form__dialog-item">Da Nang</li>
+                                    <li class="form__dialog-item">Hai Phong</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="form__warning-text">Address not empty</p>
+                    </div>
+                    <div class="form__group form__group-inline">
+                        <div class="form__checkbox">
+                            <input
+                                hidden
+                                class="form__checkbox-input"
+                                type="checkbox"
+                                name=""
+                                id="form__checkbox-input"
+                            />
+                            <label for="form__checkbox-input" class="form__checkbox-label"> Set as default card </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-address">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--primary modal__btn btn-no-margin js-toggle"
+                        toggle-target="#add-address"
+                    >
+                        Create
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay js-toggle" toggle-target="#add-address"></div>
         </div>
     </body>
 </html>
