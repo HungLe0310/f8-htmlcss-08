@@ -1398,6 +1398,7 @@ html {
   --cart-info-gift-bg-color: rgba(118, 68, 225, 0.1);
   --dialog--bg-color: #fff;
   --dialog-shadow-color: rgba(237, 237, 246, 0.2);
+  --select-dialog-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1480,6 +1481,7 @@ html.dark {
   --cart-info-gift-bg-color: #292e39;
   --dialog--bg-color: #363c4a;
   --dialog-shadow-color: rgba(23, 28, 40, 0.4);
+  --select-dialog-bg: #363c4a;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2644,6 +2646,10 @@ html.dark {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.6;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2888,28 +2894,79 @@ html.dark {
   opacity: 1;
   transition: 0.3s;
 }
+.form__dialog-heading {
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
 .form__select-dialog {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  max-height: 300px;
   visibility: hidden;
   opacity: 0;
   bottom: 52px;
   z-index: 1;
   position: absolute;
   left: 14px;
-  background: #fff;
+  background: var(--select-dialog-bg);
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+@media (max-width: 767.98px) {
+  .form__select-dialog {
+    max-height: 280px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__select-dialog {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    max-height: initial;
+    border-radius: 0;
+  }
 }
 .form__select-dialog.show {
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
 }
+.form__dialog-close {
+  font-size: 3rem;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 20px;
+}
 .form__search {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
   height: 38px;
   padding: 0 20px;
   border-bottom: 1px solid #ccc;
+}
+@media (max-width: 991.98px) {
+  .form__search {
+    height: 48px;
+  }
+}
+@media (max-width: 767.98px) {
+  .form__search {
+    height: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    margin: 20px 20px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
 }
 .form__search-icon {
   width: 16px;
@@ -2919,8 +2976,8 @@ html.dark {
   font-weight: 500;
 }
 .form__dialog-list {
-  max-height: 250px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .form__dialog-item {
   padding: 10px 20px;
@@ -2933,6 +2990,11 @@ html.dark {
 .form__dialog-item--select {
   background: #ffb700;
   font-weight: 500;
+}
+@media (max-width: 991.98px) {
+  .form__dialog-item {
+    padding: 15px 20px;
+  }
 }
 
 .message__success {
@@ -3742,6 +3804,11 @@ html.dark {
     font-size: 1.6rem;
   }
 }
+.cart-info__sub-heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.45; /* 145.455% */
+}
 .cart-info__img {
   width: 175px;
   height: 175px;
@@ -3898,6 +3965,12 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 700;
 }
+.cart-info__row-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
 .cart-info__link {
   font-size: 1.8rem;
   margin-top: 30px;
@@ -4052,6 +4125,9 @@ html.dark {
   display: flex;
   align-self: flex-end;
 }
+.card-address__edit--inital {
+  align-self: initial;
+}
 .card-address__input {
   appearance: none;
 }
@@ -4065,6 +4141,56 @@ html.dark {
 .shipping__coutinue {
   display: flex;
   align-items: center;
+}
+
+.payment__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #f6f6f6;
+  border-radius: 20px;
+}
+.payment__item-name {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44; /* 144.444% */
+}
+.payment__item-desc {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.46; /* 146.667% */
+}
+.payment__item-desc--blur {
+  color: #9e9da8;
+}
+.payment__item-info {
+  display: flex;
+  gap: 20px;
+}
+.payment__item-sub-heading {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+.payment__item + .payment__item {
+  margin-top: 30px;
+}
+.payment__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.payment__free {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.44; /* 144.444% */
+  margin-bottom: 4px;
+}
+.payment__thumb-img {
+  width: 70px;
+  height: 54px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

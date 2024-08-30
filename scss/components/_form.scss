@@ -1,6 +1,10 @@
 @use "../abstracts";
 
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.6;
+        pointer-events: none;
+    }
     &__group {
         margin-top: 30px;
         @include abstracts.breakpoint(md) {
@@ -238,28 +242,70 @@
         opacity: 1;
         transition: 0.3s;
     }
+    &__dialog-heading {
+        padding: 20px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+    }
     &__select-dialog {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        max-height: 300px;
         visibility: hidden;
         opacity: 0;
         bottom: 52px;
         z-index: 1;
         position: absolute;
         left: 14px;
-        background: #fff;
+        background: var(--select-dialog-bg);
         border: 1px solid #ccc;
         border-radius: 10px;
+        @include abstracts.breakpoint(md) {
+            max-height: 280px;
+        }
+        @include abstracts.breakpoint(sm) {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            max-height: initial;
+            border-radius: 0;
+        }
         &.show {
             visibility: visible;
             opacity: 1;
             transition: 0.3s;
         }
     }
+    &__dialog-close {
+        font-size: 3rem;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 8px 20px;
+    }
     &__search {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
         height: 38px;
         padding: 0 20px;
         border-bottom: 1px solid #ccc;
+        @include abstracts.breakpoint(lg) {
+            height: 48px;
+        }
+        @include abstracts.breakpoint(md) {
+            height: 40px;
+        }
+        @include abstracts.breakpoint(sm) {
+            margin: 20px 20px 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
         &-icon {
             width: 16px;
         }
@@ -269,8 +315,8 @@
         font-weight: 500;
     }
     &__dialog-list {
-        max-height: 250px;
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__dialog-item {
@@ -283,6 +329,9 @@
         &--select {
             background: #ffb700;
             font-weight: 500;
+        }
+        @include abstracts.breakpoint(lg) {
+            padding: 15px 20px;
         }
     }
 }

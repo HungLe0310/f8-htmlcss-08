@@ -47,20 +47,20 @@
                     <div class="breadcrumbs">
                         <ul class="breadcrumbs__content checkout__breadcrumbs">
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#!">
+                                <a class="breadcrumbs__link" href="">
                                     Home
                                     <img src="./assets/icons/arrow-right.svg" alt="" />
                                 </a>
                             </li>
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#!">
+                                <a class="breadcrumbs__link" href="./checkout.html">
                                     checkout
                                     <img src="./assets/icons/arrow-right.svg" alt="" />
                                 </a>
                             </li>
 
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="#!"> shipping</a>
+                                <a class="breadcrumbs__link" href="./shipping.html"> shipping</a>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +82,7 @@
                                             class="btn btn--primary btn--rounded user-address__btn js-toggle"
                                             toggle-target="#add-address"
                                         >
-                                            <img src="./assets/icons/plus.svg" alt="" />
+                                            <img class="icon" src="./assets/icons/plus.svg" alt="" />
                                             Add a new address
                                         </button>
                                     </div>
@@ -112,7 +112,7 @@
                                             </div>
                                             <div class="card-address__right">
                                                 <button class="card-address__edit">
-                                                    <img src="./assets/icons/write.svg" alt="" />
+                                                    <img class="icon" src="./assets/icons/write.svg" alt="" />
                                                     <span class="card-address__action">Edit</span>
                                                 </button>
                                             </div>
@@ -143,7 +143,7 @@
                                             </div>
                                             <div class="card-address__right">
                                                 <button class="card-address__edit">
-                                                    <img src="./assets/icons/write.svg" alt="" />
+                                                    <img class="icon" src="./assets/icons/write.svg" alt="" />
                                                     <span class="card-address__action">Edit</span>
                                                 </button>
                                             </div>
@@ -314,6 +314,9 @@
                                         <span>Estimated Total</span>
                                         <span>$201.65</span>
                                     </div>
+                                    <a href="./payment.html" class="btn btn--primary btn--rounded cart-info__link">
+                                        Continue to payment method
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -347,144 +350,151 @@
             <div class="modal__overlay"></div>
         </div>
         <!-- Add Address -->
-        <div id="add-address" class="modal show" style="--modal-width: 700px">
+        <div id="add-address" class="modal hide" style="--modal-width: 700px">
             <div class="modal__content">
-                <h2 class="form__title modal__heading">Add a new shipping address :</h2>
-                <form class="form modal__content-inline">
-                    <div class="form__row">
+                <form action="" class="form">
+                    <h2 class="form__title modal__heading">Add a new shipping address :</h2>
+                    <div class="form modal__content-inline">
+                        <div class="form__row">
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small"> Name </label>
+                                <div class="form__text-input">
+                                    <input
+                                        placeholder="Name"
+                                        class="form__input"
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        required
+                                        minlength="2"
+                                    />
+                                </div>
+                                <p class="form__warning-text">Your Name requires at least 2 characters</p>
+                            </div>
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small"> Phone </label>
+                                <div class="form__text-input">
+                                    <input
+                                        placeholder="Phone"
+                                        class="form__input"
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        required
+                                        minlength="11"
+                                    />
+                                </div>
+                                <p class="form__warning-text">Your phone requires at least 11 characters</p>
+                            </div>
+                        </div>
                         <div class="form__group">
-                            <label for="name" class="form__label form__label--small"> Name </label>
+                            <label for="address" class="form__label form__label--small"> Address </label>
+                            <div class="form__text-area">
+                                <textarea
+                                    id="address"
+                                    name="address"
+                                    placeholder="Address (City/Province/Street)"
+                                    class="form__text-area-input"
+                                    required
+                                ></textarea>
+                            </div>
+                            <p class="form__warning-text">Address not empty</p>
+                        </div>
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small"> City/Province/District </label>
                             <div class="form__text-input">
                                 <input
-                                    placeholder="Name"
+                                    autocomplete="none"
+                                    placeholder="City/Province/District"
                                     class="form__input"
                                     type="text"
-                                    name="name"
-                                    id="name"
+                                    name="city"
+                                    id="city"
                                     required
-                                    minlength="2"
+                                    minlength="10"
                                 />
-                            </div>
-                            <p class="form__warning-text">Your Name requires at least 2 characters</p>
-                        </div>
-                        <div class="form__group">
-                            <label for="phone" class="form__label form__label--small"> Phone </label>
-                            <div class="form__text-input">
-                                <input
-                                    placeholder="Phone"
-                                    class="form__input"
-                                    type="tel"
-                                    name="phone"
-                                    id="phone"
-                                    required
-                                    minlength="11"
+                                <img
+                                    class="form__input-img form__warning"
+                                    src="./assets/icons/auth-warning.svg"
+                                    alt=""
                                 />
-                            </div>
-                            <p class="form__warning-text">Your phone requires at least 11 characters</p>
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <label for="address" class="form__label form__label--small"> Address </label>
-                        <div class="form__text-area">
-                            <textarea
-                                id="address"
-                                name="address"
-                                placeholder="Address (City/Province/Street)"
-                                class="form__text-area-input"
-                                required
-                            ></textarea>
-                        </div>
-                        <p class="form__warning-text">Address not empty</p>
-                    </div>
-                    <div class="form__group">
-                        <label for="city" class="form__label form__label--small"> City/Province/District </label>
-                        <div class="form__text-input">
-                            <input
-                                placeholder="City/Province/District"
-                                class="form__input"
-                                type="text"
-                                name="city"
-                                id="city"
-                                required
-                                minlength="10"
-                            />
-                            <img class="form__input-img form__warning" src="./assets/icons/auth-warning.svg" alt="" />
 
-                            <!-- City dialog -->
-                            <div id="select-city" class="form__select-dialog hide">
-                                <!-- <h2 class="form__dialog-heading">City/Province/District</h2> -->
-                                <div class="form__search">
-                                    <input
-                                        placeholder="Search"
-                                        type="search"
-                                        name=""
-                                        id=""
-                                        class="form__dialog-input"
-                                    />
-                                    <img class="form__search-icon" src="./assets/icons/search.svg" alt="" />
+                                <!-- City dialog -->
+                                <div id="select-city" class="form__select-dialog hide">
+                                    <button
+                                        class="form__dialog-close d-none d-sm-block js-toggle"
+                                        toggle-target="#select-city"
+                                    >
+                                        &times
+                                    </button>
+                                    <h2 class="form__dialog-heading d-none d-sm-block">City/Province/District</h2>
+                                    <div class="form__search">
+                                        <input
+                                            placeholder="Search"
+                                            type="search"
+                                            name=""
+                                            id=""
+                                            class="form__dialog-input"
+                                        />
+                                        <img class="form__search-icon icon" src="./assets/icons/search.svg" alt="" />
+                                    </div>
+                                    <ul class="form__dialog-list">
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item form__dialog-item--select">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                        <li class="form__dialog-item">Ho Chi Minh</li>
+                                        <li class="form__dialog-item">Da Nang</li>
+                                        <li class="form__dialog-item">Hai Phong</li>
+                                        <li class="form__dialog-item">Ha Noi</li>
+                                    </ul>
                                 </div>
-                                <ul class="form__dialog-list">
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item form__dialog-item--select">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                    <li class="form__dialog-item">Ha Noi</li>
-                                    <li class="form__dialog-item">Ho Chi Minh</li>
-                                    <li class="form__dialog-item">Da Nang</li>
-                                    <li class="form__dialog-item">Hai Phong</li>
-                                </ul>
+                            </div>
+                            <p class="form__warning-text">Address not empty</p>
+                        </div>
+                        <div class="form__group form__group-inline">
+                            <div class="form__checkbox">
+                                <input
+                                    hidden
+                                    class="form__checkbox-input"
+                                    type="checkbox"
+                                    name=""
+                                    id="form__checkbox-input"
+                                />
+                                <label for="form__checkbox-input" class="form__checkbox-label">
+                                    Set as default card
+                                </label>
                             </div>
                         </div>
-                        <p class="form__warning-text">Address not empty</p>
                     </div>
-                    <div class="form__group form__group-inline">
-                        <div class="form__checkbox">
-                            <input
-                                hidden
-                                class="form__checkbox-input"
-                                type="checkbox"
-                                name=""
-                                id="form__checkbox-input"
-                            />
-                            <label for="form__checkbox-input" class="form__checkbox-label"> Set as default card </label>
-                        </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--small btn--primary modal__btn btn-no-margin">Create</button>
                     </div>
                 </form>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-address">
-                        Cancel
-                    </button>
-                    <button
-                        class="btn btn--small btn--primary modal__btn btn-no-margin js-toggle"
-                        toggle-target="#add-address"
-                    >
-                        Create
-                    </button>
-                </div>
             </div>
             <div class="modal__overlay js-toggle" toggle-target="#add-address"></div>
         </div>
