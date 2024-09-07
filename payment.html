@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -105,7 +105,7 @@
                                         <h3 class="payment__item-name">Items details</h3>
                                         <p class="payment__item-desc">2 items</p>
                                     </article>
-                                    <a href="#!" class="payment__item-desc">View details</a>
+                                    <a href="#!" class="payment__item-desc payment__item-link">View details</a>
                                 </div>
                             </div>
                             <div class="cart-info">
@@ -125,10 +125,10 @@
                                             </p>
                                         </div>
                                     </article>
-                                    <span class="payment__checkbox">
-                                        <span class="payment__free">Free</span>
-                                        <input type="radio" class="card-address__input" name="card-address__input"
-                                    /></span>
+                                    <label class="payment__checkbox">
+                                        <input type="radio" class="card-address__input" name="card-address__input" />
+                                        <span class="payment__free">Free</span></label
+                                    >
                                 </div>
                                 <div class="payment__item">
                                     <article class="payment__item-info">
@@ -141,15 +141,96 @@
                                             </p>
                                         </div>
                                     </article>
-                                    <span class="payment__checkbox">
-                                        <span class="payment__free">$12.00</span>
-                                        <input type="radio" class="card-address__input" name="card-address__input"
-                                    /></span>
+                                    <label class="payment__checkbox">
+                                        <input type="radio" class="card-address__input" name="card-address__input" />
+                                        <span class="payment__free">$12.00</span></label
+                                    >
                                 </div>
                             </div>
                         </div>
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
+                                <h2 class="cart-info__sub-heading">Payment Details</h2>
+                                <p class="payment__item-desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
+                                <form action="" class="form form__payment">
+                                    <div class="form__group">
+                                        <label for="email" class="form__label form__label--medium">
+                                            Email Address
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__warning-text">Your Name requires at least 2 characters</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="card" class="form__label form__label--medium"> Card Holder </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                placeholder="Card holder..."
+                                                class="form__input"
+                                                type="text"
+                                                name="card"
+                                                id="card"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__warning-text">Your Name requires at least 2 characters</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="details" class="form__label form__label--medium">
+                                            Card Details
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                placeholder="Card details..."
+                                                class="form__input"
+                                                type="text"
+                                                name="details"
+                                                id="details"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__warning-text">Your Name requires at least 2 characters</p>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    placeholder="MM/YY"
+                                                    class="form__input"
+                                                    type="text"
+                                                    name="date"
+                                                    id="date"
+                                                    required
+                                                    minlength="2"
+                                                />
+                                            </div>
+                                            <p class="form__warning-text">Choose Date/Months/Years</p>
+                                        </div>
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    placeholder="CVC"
+                                                    class="form__input"
+                                                    type="text"
+                                                    name="cvc"
+                                                    id="cvc"
+                                                    required
+                                                />
+                                            </div>
+                                            <p class="form__warning-text">CVC</p>
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="cart-info__detail-price">
                                     <div class="cart-info__row">
                                         <span>Subtotal (items)</span>
@@ -169,7 +250,7 @@
                                         <span>$201.65</span>
                                     </div>
                                     <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__link">
-                                        Continue to checkout
+                                        Pay $465.98
                                     </a>
                                 </div>
                             </div>

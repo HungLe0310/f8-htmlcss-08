@@ -164,6 +164,10 @@
             font-size: 1.4rem;
             line-height: 1.42;
         }
+        &--medium {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
     }
     &__slider {
         margin: 30px 0;
@@ -333,5 +337,8 @@
         @include abstracts.breakpoint(lg) {
             padding: 15px 20px;
         }
+    }
+    &__payment {
+        margin-bottom: 20px;
     }
 }
