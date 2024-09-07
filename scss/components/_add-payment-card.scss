@@ -1,0 +1,13 @@
+@use "../abstracts";
+
+.form-card__bottom {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-btn {
+        @include abstracts.breakpoint(lg) {
+            flex: 1;
+        }
+    }
+}

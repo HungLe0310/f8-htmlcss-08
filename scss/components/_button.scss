@@ -34,13 +34,11 @@
     &--liked &__img {
         display: none;
     }
-    &__img-liked {
-        margin-top: 9px;
-    }
 }
 
 // btn
 .btn {
+    color: #171c28;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,12 +57,14 @@
         }
     }
     &--text {
+        color: var(--text-color);
         background: transparent;
     }
     &--primary {
         background: #ffb700;
     }
     &--outline {
+        color: var(--text-color);
         border: 1px solid #d2d1d6;
         background: transparent;
     }

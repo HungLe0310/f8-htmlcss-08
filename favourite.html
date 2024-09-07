@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,7 +54,7 @@
                             </li>
 
                             <li class="breadcrumbs__item">
-                                <a class="breadcrumbs__link" href="./checkout.html"> checkout </a>
+                                <a class="breadcrumbs__link" href="./checkout.html"> Favourite </a>
                             </li>
                         </ul>
                     </div>
@@ -65,9 +65,37 @@
                             <!-- cart info list -->
                             <div class="cart-info">
                                 <div class="cart-info__list">
+                                    <h2 class="cart-info__heading cart-info__heading--margin">Favourite List</h2>
+                                    <p class="cart-info__desc">3 items</p>
+
+                                    <div class="cart-info__choose cart-info__choose-all">
+                                        <label class="card-address__label">
+                                            <input
+                                                type="checkbox"
+                                                class="card-address__input"
+                                                name="card-address__input"
+                                            />
+                                        </label>
+                                    </div>
+
                                     <!-- cart item 1 -->
                                     <section class="cart-info__item">
-                                        <img class="cart-info__img" src="./assets/img/products/product1.png" alt="" />
+                                        <div class="cart-info__img-wrap">
+                                            <div class="cart-info__choose">
+                                                <label class="card-address__label">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="card-address__input"
+                                                        name="card-address__input"
+                                                    />
+                                                </label>
+                                            </div>
+                                            <img
+                                                class="cart-info__img"
+                                                src="./assets/img/products/product1.png"
+                                                alt=""
+                                            />
+                                        </div>
                                         <div class="cart-info__wrap">
                                             <div class="cart-info__left">
                                                 <h3 class="cart-info__title">
@@ -76,7 +104,7 @@
                                                 <p class="cart-info__price">
                                                     $47.00 | <span class="cart-info__status">In Stock</span>
                                                 </p>
-                                                <div class="cart-info__input cart-info__input--gap">
+                                                <div class="cart-info__input">
                                                     <button class="cart-info__input-btn">
                                                         LavAzza
                                                         <img class="icon" src="./assets/icons/arrow-down2.svg" alt="" />
@@ -88,7 +116,7 @@
                                                     </button>
                                                     <div class="cart-info__btn-wrap">
                                                         <button class="cart-info__btn">
-                                                            <img src="./assets/icons/heart2.svg" alt="" /> Save
+                                                            <img src="./assets/icons/heart-red.svg" alt="" /> Save
                                                         </button>
                                                         <button
                                                             class="cart-info__btn js-toggle"
@@ -101,6 +129,7 @@
                                             </div>
                                             <div class="cart-info__right">
                                                 <span class="cart-info__total-price">$47.00</span>
+
                                                 <button class="cart-info__checkout-btn btn btn--rounded btn--primary">
                                                     Check out
                                                 </button>
@@ -109,16 +138,31 @@
                                     </section>
                                     <!-- cart item 2 -->
                                     <section class="cart-info__item">
-                                        <img class="cart-info__img" src="./assets/img/products/product2.png" alt="" />
+                                        <div class="cart-info__img-wrap">
+                                            <div class="cart-info__choose">
+                                                <label class="card-address__label">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="card-address__input"
+                                                        name="card-address__input"
+                                                    />
+                                                </label>
+                                            </div>
+                                            <img
+                                                class="cart-info__img"
+                                                src="./assets/img/products/product2.png"
+                                                alt=""
+                                            />
+                                        </div>
                                         <div class="cart-info__wrap">
                                             <div class="cart-info__left">
                                                 <h3 class="cart-info__title">
-                                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                                    Lavazza Coffee Blends - Try the Italian Espresso
                                                 </h3>
                                                 <p class="cart-info__price">
-                                                    $47.00 | <span class="cart-info__status">In Stock</span>
+                                                    $25.54| <span class="cart-info__status">In Stock</span>
                                                 </p>
-                                                <div class="cart-info__input cart-info__input--gap">
+                                                <div class="cart-info__input">
                                                     <button class="cart-info__input-btn">
                                                         LavAzza
                                                         <img class="icon" src="./assets/icons/arrow-down2.svg" alt="" />
@@ -130,7 +174,7 @@
                                                     </button>
                                                     <div class="cart-info__btn-wrap">
                                                         <button class="cart-info__btn">
-                                                            <img src="./assets/icons/heart2.svg" alt="" /> Save
+                                                            <img src="./assets/icons/heart-red.svg" alt="" /> Save
                                                         </button>
                                                         <button
                                                             class="cart-info__btn js-toggle"
@@ -142,7 +186,8 @@
                                                 </div>
                                             </div>
                                             <div class="cart-info__right">
-                                                <span class="cart-info__total-price">$47.00</span>
+                                                <span class="cart-info__total-price">$25.54</span>
+
                                                 <button class="cart-info__checkout-btn btn btn--rounded btn--primary">
                                                     Check out
                                                 </button>
@@ -151,16 +196,31 @@
                                     </section>
                                     <!-- cart item 3 -->
                                     <section class="cart-info__item">
-                                        <img class="cart-info__img" src="./assets/img/products/product3.png" alt="" />
+                                        <div class="cart-info__img-wrap">
+                                            <div class="cart-info__choose">
+                                                <label class="card-address__label">
+                                                    <input
+                                                        type="checkbox"
+                                                        class="card-address__input"
+                                                        name="card-address__input"
+                                                    />
+                                                </label>
+                                            </div>
+                                            <img
+                                                class="cart-info__img"
+                                                src="./assets/img/products/product3.png"
+                                                alt=""
+                                            />
+                                        </div>
                                         <div class="cart-info__wrap">
                                             <div class="cart-info__left">
                                                 <h3 class="cart-info__title">
-                                                    Coffee Beans - Espresso Arabica and Robusta Beans
+                                                    Qualità Oro Mountain Grown - Espresso Coffee Beans
                                                 </h3>
                                                 <p class="cart-info__price">
-                                                    $47.00 | <span class="cart-info__status">In Stock</span>
+                                                    $37.86 | <span class="cart-info__status">In Stock</span>
                                                 </p>
-                                                <div class="cart-info__input cart-info__input--gap">
+                                                <div class="cart-info__input">
                                                     <button class="cart-info__input-btn">
                                                         LavAzza
                                                         <img class="icon" src="./assets/icons/arrow-down2.svg" alt="" />
@@ -172,7 +232,7 @@
                                                     </button>
                                                     <div class="cart-info__btn-wrap">
                                                         <button class="cart-info__btn">
-                                                            <img src="./assets/icons/heart2.svg" alt="" /> Save
+                                                            <img src="./assets/icons/heart-red.svg" alt="" /> Save
                                                         </button>
                                                         <button
                                                             class="cart-info__btn js-toggle"
@@ -184,7 +244,8 @@
                                                 </div>
                                             </div>
                                             <div class="cart-info__right">
-                                                <span class="cart-info__total-price">$47.00</span>
+                                                <span class="cart-info__total-price">$37.86</span>
+
                                                 <button class="cart-info__checkout-btn btn btn--rounded btn--primary">
                                                     Check out
                                                 </button>
@@ -192,9 +253,9 @@
                                         </div>
                                     </section>
                                 </div>
-                                <div class="cart-info__bottom d-md-none">
+                                <div class="cart-info__bottom">
                                     <div class="row">
-                                        <div class="col-10 col-xxl-9">
+                                        <div class="col-10 col-xxl-9 col-md-8 col-sm-12">
                                             <div class="cart-info__bottom-continue">
                                                 <a class="cart-info__bottom-link" href="./">
                                                     <img
@@ -206,10 +267,10 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="col-2 col-xxl-3">
+                                        <div class="col-2 col-xxl-3 col-md-4 col-sm-12">
                                             <a
                                                 href="./checkout.html"
-                                                class="cart-info__checkout-btn btn btn--rounded btn--primary"
+                                                class="cart-info__checkout-btn cart-info__checkout-btn--no-margin btn btn--rounded btn--primary"
                                             >
                                                 All Check out
                                             </a>
@@ -218,7 +279,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4 col-xl-12"></div>
                     </div>
                 </div>
             </div>

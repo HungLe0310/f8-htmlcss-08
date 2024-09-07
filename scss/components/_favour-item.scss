@@ -1,0 +1,42 @@
+@use "../abstracts";
+%flexCenter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.favour__item {
+    @extend %flexCenter;
+    &-img {
+        width: 151px;
+        height: 108px;
+        object-fit: contain;
+        @include abstracts.breakpoint(lg) {
+            width: 129px;
+            height: 78px;
+        }
+    }
+    &-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+    }
+    &-wrap {
+        margin-top: 10px;
+        @extend %flexCenter;
+    }
+    &-price {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+        @include abstracts.breakpoint(lg) {
+            font-size: 2rem;
+        }
+    }
+    &-separate {
+        margin: 20px 0;
+        height: 1px;
+        width: 100%;
+        background: var(--favour-item-separate-color);
+    }
+}
